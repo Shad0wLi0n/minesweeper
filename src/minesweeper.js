@@ -33,8 +33,14 @@ const generateBombBoard = (numberOfRows, numberOfColumns, numberOfBombs) => {
 };
 
 const printBoard = board => {
-	board.map(row => {
-		row.join(' | ');
-	});
+	console.log( board.map(row => row.join(' | ') ).join('\n') );
 };
-// console.log(generatePlayerBoard(3,4));
+
+let playerBoard = generatePlayerBoard(3, 4);
+let bombBoard = generateBombBoard(3, 4, 5);
+
+console.log('Player Board: ');
+printBoard(playerBoard);
+
+console.log('Bomb Board; ');
+printBoard(bombBoard);
