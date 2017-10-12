@@ -64,7 +64,7 @@ class Board {
 	}
 
 	hasSafeTiles() {
-		return this._numberOfTiles !== this._numberOfBombs;
+		return this._numberOfTiles === this._numberOfBombs;
 	}
 
 	print() {
